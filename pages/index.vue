@@ -10,6 +10,8 @@
         <hr>
         <br> -->
 
+        <!-- <Counter :initialValue="100" :delay="1"></Counter> -->
+
         <table>
             <tr>
                 <th>Name</th>
@@ -71,7 +73,7 @@
                 this.precio++;
             },
             addDevice(){
-                this.devices.push(this.newDevice)
+                this.devices.push(JSON.parse(JSON.stringify(this.newDevice)));
             },
             getDevices(){
                 var response = [
